@@ -12,7 +12,13 @@
     <body>
 
         {% block body %}
-        <h1>Hola mundo</h1>
+            {% for i in 1..10 %}
+                 <div> {{ 'titulo '|upper }}{{ i }}</div>
+            {% endfor %}
+
+            {% if variable == "hola" %}
+                <div> Variable correcta </div>
+            {% endif %}
         
         {% endblock %}
 
